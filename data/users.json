@@ -1,0 +1,45 @@
+[
+    {
+        "id": 1,
+        "name": "Tabby",
+        "email": "tabby@gmail.com",
+        "projects": [
+            {
+                "title": "Project Management CLI",
+                "description": "Summative Lab",
+                "due_date": "2026-07-31",
+                "tasks": [
+                    {
+                        "title": "Create Database",
+                        "assigned_to": "John",
+                        "status": true
+                    }
+                ]
+            },
+            {
+                "title": "Hospital Management System",
+                "description": "Manage patient records",
+                "due_date": "2026-12-31",
+                "tasks": [
+                    {
+                        "title": "Create Database",
+                        "assigned_to": "John",
+                        "status": true
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "John",
+        "email": "john@gmail.com",
+        "projects": []
+    },
+    {
+        "id": 3,
+        "name": "Mary",
+        "email": "mary@gmail.com",
+        "projects": []
+    }
+]
