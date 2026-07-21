@@ -61,23 +61,53 @@ def add_user(args):
     save_users(users)
 
     print(f"User '{args.name}' added successfully.")
-def list_users(args):
-    users = get_users()
-
-    if not users:
-        print("No users found.")
-        return
-
-    print("\n=== USERS ===")
-
-    for user in users:
-        print(f"ID: {user['id']}")
-        print(f"Name: {user['name']}")
-        print(f"Email: {user['email']}")
-        print(f"Projects: {len(user['projects'])}")
-        print("-" * 40)
 
 
+[
+    {
+        "id": 1,
+        "name": "Tabby",
+        "email": "tabby@gmail.com",
+        "projects": [
+            {
+                "title": "Project Management CLI",
+                "description": "Summative Lab",
+                "due_date": "2026-07-31",
+                "tasks": [
+                    {
+                        "title": "Create Database",
+                        "assigned_to": "John",
+                        "status": true
+                    }
+                ]
+            },
+            {
+                "title": "Hospital Management System",
+                "description": "Manage patient records",
+                "due_date": "2026-12-31",
+                "tasks": [
+                    {
+                        "title": "Create Database",
+                        "assigned_to": "John",
+                        "status": true
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "John",
+        "email": "john@gmail.com",
+        "projects": []
+    },
+    {
+        "id": 3,
+        "name": "Mary",
+        "email": "mary@gmail.com",
+        "projects": []
+    }
+]
 def add_project(args):
     users = get_users()
 
@@ -121,24 +151,12 @@ def list_projects(args):
                 print(f"Title: {project['title']}")
                 print(f"Description: {project['description']}")
                 print(f"Due Date: {project['due_date']}")
-
-                if project["tasks"]:
-                    print("Tasks:")
-
-                    for task in project["tasks"]:
-                        status = "Complete" if task["status"] else "Incomplete"
-
-                        print(f"  • {task['title']}")
-                        print(f"    Assigned To: {task['assigned_to']}")
-                        print(f"    Status: {status}")
-
                 print()
 
             found = True
 
     if not found:
-        print("No projects found.")
-        
+        print("No projects found.")  
 def add_task(args):
     users = get_users()
 

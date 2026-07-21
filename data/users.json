@@ -34,12 +34,31 @@
         "id": 2,
         "name": "John",
         "email": "john@gmail.com",
-        "projects": []
+        "projects": [
+            {
+                "title": "School Management System",
+                "description": "Manage students and teachers",
+                "due_date": "2026-12-30",
+                "tasks": [
+                    {
+                        "title": "Create Database",
+                        "assigned_to": "John",
+                        "status": true
+                    }
+                ]
+            }
+        ]
     },
     {
         "id": 3,
         "name": "Mary",
         "email": "mary@gmail.com",
+        "projects": []
+    },
+    {
+        "id": 4,
+        "name": "David",
+        "email": "david@gmail.com",
         "projects": []
     }
 ]
