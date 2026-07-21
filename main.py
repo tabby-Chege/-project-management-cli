@@ -167,6 +167,33 @@ def add_task(args):
             return
 
     print("Project not found.")
+def list_tasks(args):
+    users = get_users()
+
+    for user in users:
+        project = find_project(user, args.project)
+
+        if project:
+            print(f"\nTasks for {project['title']}")
+            print("-" * 50)
+
+            if not project["tasks"]:
+                print("No tasks found.")
+                return
+
+            for i, task in enumerate(project["tasks"], start=1):
+                status = "Complete" if task["status"] else "Incomplete"
+
+                print(f"{i}. {task['title']}")
+                print(f"   Assigned To: {task['assigned_to']}")
+                print(f"   Status: {status}")
+                print()
+
+            return
+
+    print("Project not found.")
+
+
 
 
 def complete_task(args):
@@ -247,7 +274,6 @@ def main():
     )
 
     add_project_parser.set_defaults(func=add_project)
-
     # ----------------------
     # list-projects
     # ----------------------
@@ -257,6 +283,21 @@ def main():
     )
 
     list_project_parser.set_defaults(func=list_projects)
+
+    # ----------------------
+    # list-tasks
+    # ----------------------
+    list_task_parser = subparsers.add_parser(
+        "list-tasks",
+        help="Display tasks for a project"
+    )
+
+    list_task_parser.add_argument(
+        "--project",
+        required=True
+    )
+
+    list_task_parser.set_defaults(func=list_tasks)
 
     # ----------------------
     # add-task
@@ -283,8 +324,8 @@ def main():
     )
 
     add_task_parser.set_defaults(func=add_task)
-
-    # ----------------------
+   
+       # ----------------------
     # complete-task
     # ----------------------
     complete_parser = subparsers.add_parser(

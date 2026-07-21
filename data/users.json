@@ -46,6 +46,18 @@
                         "status": true
                     }
                 ]
+            },
+            {
+                "title": "Inventory System",
+                "description": "Track products",
+                "due_date": "2026-11-30",
+                "tasks": [
+                    {
+                        "title": "Design Database",
+                        "assigned_to": "John",
+                        "status": true
+                    }
+                ]
             }
         ]
     },
@@ -59,6 +71,12 @@
         "id": 4,
         "name": "David",
         "email": "david@gmail.com",
+        "projects": []
+    },
+    {
+        "id": 5,
+        "name": "James",
+        "email": "james@gmail.com",
         "projects": []
     }
 ]
