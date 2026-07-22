@@ -77,6 +77,49 @@
         "id": 5,
         "name": "James",
         "email": "james@gmail.com",
+        "projects": [
+            {
+                "title": "Website Development",
+                "description": "Develop company website",
+                "due_date": "2026-12-30",
+                "tasks": [
+                    {
+                        "title": "Design Homepage",
+                        "assigned_to": "Prince",
+                        "status": false
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "prince",
+        "email": "Prince@gmail.com",
+        "projects": []
+    },
+    {
+        "id": 7,
+        "name": "Edwin",
+        "email": "edwin@gmail.com",
+        "projects": []
+    },
+    {
+        "id": 8,
+        "name": "Nancy",
+        "email": "nancy@gmail.com",
+        "projects": []
+    },
+    {
+        "id": 9,
+        "name": "Susan",
+        "email": "susan@gmail.com",
+        "projects": []
+    },
+    {
+        "id": 10,
+        "name": "Samuel",
+        "email": "samuel@gmail.com",
         "projects": []
     }
 ]
